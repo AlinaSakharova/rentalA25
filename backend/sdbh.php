@@ -30,7 +30,7 @@ class sdbh {
 		$this -> host = 'localhost';
 		$this -> dbname = 'test_a25';
 		$this -> user = 'root';
-		$this -> pass = 'alina';
+		$this -> pass = '';
 		$mysql_conn = mysqli_connect($this -> host, $this -> user, $this -> pass, $this -> dbname, $this->port);
 
 		$this -> sql_read = $mysql_conn;
