@@ -90,8 +90,8 @@ $dbh = new sdbh();
                                     <?$services = unserialize($dbh->mselect_rows('a25_settings', ['set_key' => 'services'], 0, 1, 'id')[0]['set_value']);?>
                                     <?foreach($services as $k => $s) { ?>
                                     <div class="form-check">
-                                        <input class="form-check-input" name="services[]" type="checkbox" value="<?=$s?>" id="flexCheckChecked" checked>
-                                        <label class="form-check-label"  for="flexCheckChecked">
+                                        <input class="form-check-input" name="services[]" type="checkbox" value="<?=$s?>" id="flexCheckChecked<?=$s?>" checked>
+                                        <label class="form-check-label"  for="flexCheckChecked<?=$s?>">
                                             <?=$k?>: <?=$s?>
                                         </label>
                                     </div>
