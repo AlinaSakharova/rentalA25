@@ -58,14 +58,6 @@ class form
         if(isset($_POST['days']) and $_POST['days'] != 0)
         {
             $products = $dbh->mselect_cols('a25_products','ID', 'NAME', 'PRICE', 'TARIFF', 'id');
-            //Избавились от дырки в  массиве
-            $prod = array();
-            foreach ($prod as $key => $value)
-            {
-                $val1=key($value);
-                $val2=current($value);
-                $prod[$val1]=$val2;
-            }
             $total = array("total" => $this->final_calculation($products));
         }
         echo json_encode($total);
